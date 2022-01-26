@@ -1,0 +1,105 @@
+.bodystyle {
+  background: rgb(250, 248, 248);
+  opacity: 0.8;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  text-align: center;
+  color: rgb(54, 54, 54);
+}
+
+.weather-app {
+  border: 1px solid grey;
+  padding: 15px;
+  border-radius: 5px;
+  background: rgb(224, 224, 224);
+}
+
+.date {
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+.time {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.currentButton {
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: 1px solid gray;
+  padding: 5px 10px;
+}
+h3 {
+  padding-bottom: 40px;
+}
+h4 {
+  margin-top: 10px;
+  padding-bottom: 0;
+}
+p {
+  font-size: 30px;
+}
+.current-city {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.weatherDescription {
+  font-size: 20px;
+  opacity: 0.8;
+}
+.temp-wrap {
+  display: inline;
+}
+a {
+  text-decoration: none;
+}
+.units {
+  font-size: 15px;
+  position: relative;
+  top: -20px;
+}
+.list {
+  color: dimgray;
+  position: relative;
+  bottom: 5px;
+  left: -20px;
+  padding-top: 10px;
+  display: inline-block;
+}
+ul {
+  list-style: none;
+  font-size: 10px;
+}
+.current-degrees {
+  font-size: 45px;
+}
+.day-heading {
+  opacity: 0.8;
+  text-shadow: 1px 1px 2px rgba(53, 50, 50, 0.4);
+}
+.temp {
+  font-size: 20px;
+  position: relative;
+  bottom: -8px;
+}
+.small-weather {
+  position: relative;
+  right: -8px;
+}
+
+.low-temp {
+  font-size: 10px;
+  position: relative;
+  bottom: -15px;
+}
+form {
+  margin-bottom: 30px;
+}
