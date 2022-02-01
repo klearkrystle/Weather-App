@@ -10,12 +10,17 @@ p {
   text-align: center;
   color: rgb(54, 54, 54);
 }
-
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
 .weather-app {
   border: 1px solid grey;
   padding: 15px;
   border-radius: 5px;
   background: rgb(224, 224, 224);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .date {
