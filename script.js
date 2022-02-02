@@ -48,16 +48,20 @@ function displayWeather(response) {
   );
 }
 
-function search(event) {
-  event.preventDefault();
+function search(city) {
   let apiKey = `2bf7017310b5c51608cafa98eba66487`;
-  let city = document.querySelector("#city-input").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(displayWeather);
 }
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityElement = document.querySelector("#city-input");
+  search(cityElement.value);
+}
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit", handleSubmit);
 
 function showWeather(response) {
   let temperature = document.querySelector("searchForm");
@@ -69,6 +73,7 @@ function showWeather(response) {
   let city = cityInput.value;
   console.log(response);
 }
+
 function searchCurrentLocation(position) {
   let apiKey = "2bf7017310b5c51608cafa98eba66487";
   let units = "metric";
@@ -83,3 +88,5 @@ function showCurrentLocation() {
 }
 let currentLocationTemp = document.querySelector("#currentTempButton");
 currentLocationTemp.addEventListener("click", showCurrentLocation);
+
+search("london");
