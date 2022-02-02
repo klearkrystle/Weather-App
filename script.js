@@ -60,6 +60,7 @@ function handleSubmit(event) {
   let cityElement = document.querySelector("#city-input");
   search(cityElement.value);
 }
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
@@ -88,5 +89,16 @@ function showCurrentLocation() {
 }
 let currentLocationTemp = document.querySelector("#currentTempButton");
 currentLocationTemp.addEventListener("click", showCurrentLocation);
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+
+  let fahrenheitTemperature = (14 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#farenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 search("london");
