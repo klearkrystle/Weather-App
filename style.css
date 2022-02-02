@@ -42,14 +42,14 @@ p {
   display: block;
   margin: 0 auto;
   border-radius: 4px;
-  border: 1px solid gray;
+  border: 1px solid rgb(87, 34, 34);
   padding: 5px 10px;
 }
 h3 {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 h4 {
-  margin-top: 10px;
+  margin-top: 20px;
   padding-bottom: 0;
 }
 p {
@@ -63,6 +63,11 @@ p {
 .weatherDescription {
   font-size: 20px;
   opacity: 0.8;
+  text-transform: capitalize;
+}
+.weather-image {
+  position: relative;
+  top: -10px;
 }
 .temp-wrap {
   display: inline;
@@ -77,15 +82,11 @@ a {
 }
 .list {
   color: dimgray;
-  position: relative;
-  bottom: 5px;
-  left: -20px;
-  padding-top: 10px;
-  display: inline-block;
 }
 ul {
   list-style: none;
-  font-size: 10px;
+  margin-top: 15px;
+  font-size: 13px;
 }
 .current-degrees {
   font-size: 45px;
@@ -110,5 +111,5 @@ ul {
   bottom: -15px;
 }
 form {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }

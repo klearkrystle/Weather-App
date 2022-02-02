@@ -33,7 +33,7 @@
               <input
                 type="search"
                 class="form-control shadow"
-                placeholder="Enter City"
+                placeholder="Enter City..."
                 autofocus="on"
                 autocomplete="off"
                 id="city-input"
@@ -48,23 +48,33 @@
 <div><p class="current-city" id="large-city">London</p></div>
 <div class= weatherDescription id=description>
     
-
+clear
 </div>
- <p class="temp-wrap">
-        <img src="images/sun_clouds.png" alt="cloudSun" width="62px">
+<div class="row">
+    <div class= "col-6">
+ 
+        <img src="images/sun_clouds.png" 
+        alt="cloudSun" 
+        width="62px"  
+        class="weather-image"
+        id="weather-icon">
+       
            <span class="current-degrees" id="current-temp"> 19</span>
            <span class="units">
 <a href="#" id="celcius-link"> °C</a>  | 
 <a href="#" id="farenheit-link"> °F</a>
 
            </span> 
-         
+           </div>
+         <div class="col-6">
          <ul class="list">
              <li>Wind: <span id="wind">10</span>mph</li>
-             <li>Humidity:<span id="humidity">90</span>%</li>
+             <li>Humidity: <span id="humidity">90</span>%</li>
 
            </ul>
   
+</div>
+</div>
 
           
           </p>

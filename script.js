@@ -28,7 +28,10 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
 function displayWeather(response) {
-  console.log(response);
+  console.log(response.data.weather[0].main);
+
+  let iconElement = document.querySelector("#weather-icon");
+
   document.querySelector("#large-city").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
@@ -38,7 +41,11 @@ function displayWeather(response) {
     response.data.wind.speed
   );
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function search(event) {
