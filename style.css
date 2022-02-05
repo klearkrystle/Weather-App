@@ -93,22 +93,31 @@ ul {
 }
 .day-heading {
   opacity: 0.8;
-  text-shadow: 1px 1px 2px rgba(53, 50, 50, 0.4);
+  text-shadow: ;
 }
 .temp {
   font-size: 20px;
   position: relative;
-  bottom: -8px;
+  margin-top: 2px;
+  margin-bottom: 1px;
+
+  right: -2px;
+}
+.small-weather-icon {
+  margin-bottom: 1px;
+  position: relative;
+  right: -4px;
 }
 .small-weather {
   position: relative;
   right: -8px;
+  margin-bottom: 1px;
 }
 
 .low-temp {
   font-size: 10px;
   position: relative;
-  bottom: -15px;
+  bottom: -7px;
 }
 form {
   margin-bottom: 20px;
