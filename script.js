@@ -27,6 +27,35 @@ let dateElement = document.querySelector("#current-date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
+function displayForecast() {
+  let forcastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row gx-2">`;
+  let days = ["thu", "Fri", "sat", "sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+                
+                <div class="col-2">
+                  
+                  <div class="p-3 border bg-light border-white shadow-sm rounded">
+                    <div class="d-flex justify-content-center" >
+                      <div class="day-heading">${day}</div>
+                      </div> 
+                      <div><p class="temp">18°</p></div>
+                       <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon" 
+                       width="36"
+                       class="small-weather-icon"> 
+                       
+                    <div><p class="low-temp">10°</p></div>
+                    </div> 
+                    </div> 
+`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forcastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   console.log(response.data.weather[0].main);
 
@@ -90,6 +119,9 @@ function showCurrentLocation() {
 let currentLocationTemp = document.querySelector("#currentTempButton");
 currentLocationTemp.addEventListener("click", showCurrentLocation);
 
+search("london");
+displayForecast();
+
 function displayFahrenheitTemp(event) {
   event.preventDefault();
 
@@ -100,5 +132,3 @@ function displayFahrenheitTemp(event) {
 
 let fahrenheitLink = document.querySelector("#farenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
-
-search("london");

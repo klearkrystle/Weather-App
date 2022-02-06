@@ -65,6 +65,9 @@ p {
   opacity: 0.8;
   text-transform: capitalize;
 }
+.weather-foreast {
+  text-align: center;
+}
 .weather-image {
   position: relative;
   top: -10px;
@@ -89,11 +92,12 @@ ul {
   font-size: 13px;
 }
 .current-degrees {
-  font-size: 45px;
+  font-size: 50px;
+  text-shadow: 1px 1px 2px rgb(56, 54, 170);
 }
 .day-heading {
   opacity: 0.8;
-  text-shadow: ;
+  text-shadow: 0.5px 0.5px 1px rgb(56, 54, 170);
 }
 .temp {
   font-size: 20px;
@@ -105,19 +109,16 @@ ul {
 }
 .small-weather-icon {
   margin-bottom: 1px;
-  position: relative;
-  right: -4px;
 }
 .small-weather {
-  position: relative;
-  right: -8px;
   margin-bottom: 1px;
 }
 
 .low-temp {
-  font-size: 10px;
+  font-size: 15px;
   position: relative;
   bottom: -7px;
+  opacity: 0.8;
 }
 form {
   margin-bottom: 20px;
