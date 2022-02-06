@@ -27,7 +27,9 @@ let dateElement = document.querySelector("#current-date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
+
   let forcastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row gx-2">`;
   let days = ["thu", "Fri", "sat", "sun"];
@@ -56,6 +58,14 @@ function displayForecast() {
   forcastElement.innerHTML = forecastHTML;
 }
 
+function getForcast(coordinates) {
+  console.log(coordinates);
+  let apiKey = `2bf7017310b5c51608cafa98eba66487`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeather(response) {
   console.log(response.data.weather[0].main);
 
@@ -75,6 +85,8 @@ function displayWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForcast(response.data.coord);
 }
 
 function search(city) {
@@ -120,7 +132,6 @@ let currentLocationTemp = document.querySelector("#currentTempButton");
 currentLocationTemp.addEventListener("click", showCurrentLocation);
 
 search("london");
-displayForecast();
 
 function displayFahrenheitTemp(event) {
   event.preventDefault();
