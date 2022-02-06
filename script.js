@@ -50,7 +50,7 @@ function displayForecast(response) {
         ` 
                  <div class="col-2">
                   
-                  <div class="p-3 border bg-light border-white shadow-sm rounded">
+                  <div class="p-3 border bg-light.bg-gradient border-grey shadow-sm rounded forcast-wrapper">
                     <div class="d-flex justify-content-center" >
                       <div class="day-heading">${formatDay(
                         forecastDay.dt
@@ -65,7 +65,7 @@ function displayForecast(response) {
                        width="36"
                        class="small-weather-icon"> 
                        
-                    <div><p class="low-temp">${Math.round(
+                    <div><p class="low-temp small-weather ">${Math.round(
                       forecastDay.temp.min
                     )}°</p></div>
                     </div> 
@@ -132,7 +132,6 @@ function showWeather(response) {
 
   cityElement.innerHTML = cityInput.value;
   let city = cityInput.value;
-  console.log(response);
 }
 
 function searchCurrentLocation(position) {

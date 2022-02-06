@@ -6,6 +6,10 @@ h1 {
   font-size: 20px;
   opacity: 0.8;
 }
+h2 {
+  color: white;
+}
+
 h1,
 h2,
 h3,
@@ -16,13 +20,17 @@ p {
 }
 .weather-app-wrapper {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 .weather-app {
   border: 1px solid grey;
   padding: 15px;
   border-radius: 5px;
-  background: rgb(224, 224, 224);
+  background: radial-gradient(
+    999px at 0.4% 48%,
+    rgb(202, 204, 227) 0%,
+    rgb(89, 89, 99) 97.5%
+  );
   max-width: 600px;
   margin: 0 auto;
 }
@@ -65,8 +73,14 @@ p {
   opacity: 0.8;
   text-transform: capitalize;
 }
+.search-button {
+  border: blanchedalmond;
+}
 .weather-foreast {
   text-align: center;
+}
+.forcast-wrapper {
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 }
 .weather-image {
   position: relative;
@@ -81,26 +95,30 @@ a {
 .units {
   font-size: 15px;
   position: relative;
-  top: -20px;
+  top: -25px;
 }
 .list {
-  color: dimgray;
+  color: rgb(32, 26, 26);
+  margin-top: 15px;
+  margin-left: -30px;
 }
 ul {
   list-style: none;
-  margin-top: 15px;
+
   font-size: 13px;
 }
 .current-degrees {
   font-size: 50px;
-  text-shadow: 1px 1px 2px rgb(56, 54, 170);
+  text-shadow: 1px 1px 2px rgb(110, 81, 114);
 }
 .day-heading {
+  font-weight: bold;
   opacity: 0.8;
-  text-shadow: 0.5px 0.5px 1px rgb(56, 54, 170);
+  text-shadow: 0.5px 0.5px 1px rgb(234, 234, 238);
 }
 .temp {
   font-size: 20px;
+  color: rgb(29, 28, 28);
   position: relative;
   margin-top: 2px;
   margin-bottom: 1px;
@@ -112,6 +130,7 @@ ul {
 }
 .small-weather {
   margin-bottom: 1px;
+  color: rgb(19, 32, 43);
 }
 
 .low-temp {
