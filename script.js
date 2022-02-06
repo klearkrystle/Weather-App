@@ -129,6 +129,3 @@ function displayFahrenheitTemp(event) {
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-
-let fahrenheitLink = document.querySelector("#farenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
